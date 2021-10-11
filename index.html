@@ -12,6 +12,8 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
     * {
       padding: 0;
       margin: 0;
@@ -27,18 +29,96 @@
     }
 
     .container {
-      width: 400px;
-      margin: 0 auto;
+      font-family: 'Red Hat Display', sans-serif;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin: auto;
       text-align: center;
       display: flex;
       justify-content: center;
       align-content: center;
+      border-radius: 20px;
+      box-shadow: 20px 10px 20px grey;
+      background-image: url('images/pattern-background-desktop.svg');
+      background-size: 100% 50%;
+      background-repeat: no-repeat;
     }
 
     .wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      /*centers items on the cross-axis (y by default)*/
+    }
+
+    .payment-card {
+      background-color: #fff;
+      max-width: 450px;
+      box-shadow: 20px 10px 20px #ddd;
+      border-radius: 20px;
+    }
+
+    .payment-card img {
+      border-radius: 20px 20px 0px 0px;
+    }
+
+    .order-content {
+      padding: 40px 50px;
+
+    }
+
+    .order-content h2 {
+      margin-bottom: 15px;
+    }
+
+    .order-content p {
+      padding: 0 20px;
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    .plans img {
+      display: block;
+      margin: auto;
+    }
+
+    .plans {
+      background: #f4f4f4;
+      margin: 10px 0;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .payment_btn {
+      width: 100%;
+      display: block;
+      background-color: #1E1FCD;
+      padding: 10px 30px;
+      color: #fff;
+      margin: 30px 0;
+      border-radius: 10px;
+      box-shadow: 0px 5px 20px #1E1FCD;
+    }
+
+    .cancel_btn {
+      border: none;
+      padding: 0;
+      color: grey;
+      background: none;
+      font-size: 14px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -46,7 +126,7 @@
 <body>
   <div clas="wrapper">
     <div class="container">
-      <div>
+      <div class="payment-card">
         <div class="image-container">
           <img src="images/illustration-hero.svg" alt="image">
 
@@ -56,15 +136,22 @@
 
           <p> You can now listen to millions of songs, audiobooks, and podcasts on any
             device anywhere you like!</p>
-        </div>
-        <Annual> <img src="images/icon-music.svg"> <span>Annual Plan</span>
-          <span>$59.99/year</span>
 
-          <span><a href="#">Change</a></span>
+          <div class="plans">
+            <div><img src="images/icon-music.svg"> </div>
+            <div>
+              <h5>Annual Plan</h5>
+              <p>$59.99/year</p>
+            </div>
+
+            <div><a href="#">Change</a></div>
+          </div>
           <div>
             <button class="payment_btn"> Proceed to Payment</button>
             <button class="cancel_btn"> Cancel Order</button>
           </div>
+        </div>
+
       </div>
 
     </div>
